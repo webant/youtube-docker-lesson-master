@@ -12,7 +12,8 @@ RESOURCE_DIR = os.path.join(BASE_FOLDER, "resources")
 @app.route('/')
 def hello_world():
     with open(os.path.join(RESOURCE_DIR, "response.json")) as f:
-        return "%s - %s" % (json.loads(f.read()).get("payload"), datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S"))
+        return "%s - %s" % (json.loads(f.read()).get("payload")
+                            #, datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S"))
 
 
 if __name__ == "__main__":
